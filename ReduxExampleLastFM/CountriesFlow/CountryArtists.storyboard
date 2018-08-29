@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xLW-ph-j8a">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cIe-xv-dRF">
+            <objects>
+                <navigationController id="xLW-ph-j8a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dUo-no-RVt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6uM-Qu-ijg" kind="relationship" relationship="rootViewController" id="W7m-re-oTu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLu-lH-Psw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1257" y="203"/>
+        </scene>
+        <!--Artists List Container View Controller-->
+        <scene sceneID="yf6-AG-N4t">
+            <objects>
+                <viewController id="6uM-Qu-ijg" customClass="ArtistsListContainerViewController" customModule="ReduxExampleLastFM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QKB-Jo-uXb"/>
+                        <viewControllerLayoutGuide type="bottom" id="PZM-dp-iuu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1He-yv-G9E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXj-3H-hFc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="msb-th-bd1" kind="embed" id="ukJ-F4-79s"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OXj-3H-hFc" secondAttribute="trailing" id="HqI-IM-CcP"/>
+                            <constraint firstItem="OXj-3H-hFc" firstAttribute="leading" secondItem="1He-yv-G9E" secondAttribute="leading" id="K1t-10-37J"/>
+                            <constraint firstItem="OXj-3H-hFc" firstAttribute="top" secondItem="QKB-Jo-uXb" secondAttribute="bottom" id="Pg7-Hv-2Iv"/>
+                            <constraint firstItem="PZM-dp-iuu" firstAttribute="top" secondItem="OXj-3H-hFc" secondAttribute="bottom" id="VHf-yw-bs3"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="w1b-wf-6hk">
+                        <connections>
+                            <outlet property="titleView" destination="ZBa-9q-0hV" id="chB-tQ-alZ"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countryImageView" destination="UFV-u2-23I" id="h6e-sJ-Mpx"/>
+                        <outlet property="countryLabel" destination="1uV-PR-QjD" id="9FW-q8-Bt0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSx-Hk-c62" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="ZBa-9q-0hV" customClass="CustomTitleView" customModule="ReduxExampleLastFM" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dbG-t9-n5r">
+                            <rect key="frame" x="74" y="5" width="92" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uV-PR-QjD">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFV-u2-23I">
+                                    <rect key="frame" x="62" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="EQ8-jX-0Ae"/>
+                                        <constraint firstAttribute="height" constant="30" id="OD8-CX-PXz"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="dbG-t9-n5r" firstAttribute="centerY" secondItem="ZBa-9q-0hV" secondAttribute="centerY" id="2f3-zd-815"/>
+                        <constraint firstItem="dbG-t9-n5r" firstAttribute="centerX" secondItem="ZBa-9q-0hV" secondAttribute="centerX" id="GT5-Sg-iIy"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ebe-Fa-Yaw" appends="YES" id="WHy-6d-J2p"/>
+                    </connections>
+                </view>
+                <tapGestureRecognizer id="ebe-Fa-Yaw">
+                    <connections>
+                        <segue destination="tzs-r5-tNs" kind="presentation" id="LzQ-TR-tQH"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-513" y="203"/>
+        </scene>
+        <!--Countries Collection View Controller-->
+        <scene sceneID="sBE-yT-7EW">
+            <objects>
+                <collectionViewController modalPresentationStyle="overFullScreen" id="tzs-r5-tNs" customClass="CountriesCollectionViewController" customModule="ReduxExampleLastFM" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RLG-CV-jiW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84859267979452058" colorSpace="calibratedRGB"/>
+                        <collectionViewLayout key="collectionViewLayout" id="NRy-o4-8TU" customClass="CountriesCollectionViewLayout" customModule="ReduxExampleLastFM" customModuleProvider="target"/>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="tzs-r5-tNs" id="S3g-W0-9e3"/>
+                            <outlet property="delegate" destination="tzs-r5-tNs" id="2nw-EW-HK3"/>
+                        </connections>
+                    </collectionView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZv-nj-nC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-514" y="966"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xch-OJ-wUR">
+            <objects>
+                <tabBarController id="msb-th-bd1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="S9d-nc-3QI"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="2pv-HL-zbh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jYw-Xs-zE2" kind="relationship" relationship="viewControllers" id="nTY-zd-XL5"/>
+                        <segue destination="Gs8-xC-N0Y" kind="relationship" relationship="viewControllers" id="8jZ-am-es1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPn-32-Gko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="203"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="t8e-uq-sJl">
+            <objects>
+                <tableViewController id="jYw-Xs-zE2" customClass="ArtistsListTableViewController" customModule="ReduxExampleLastFM" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a7f-KY-Gjd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="jYw-Xs-zE2" id="qZ6-Zb-RHz"/>
+                            <outlet property="delegate" destination="jYw-Xs-zE2" id="Py3-Fr-TBZ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="List" id="LD4-DZ-rPa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2f-Xo-X6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="-197"/>
+        </scene>
+        <!--Collection-->
+        <scene sceneID="8hT-Gb-JCs">
+            <objects>
+                <collectionViewController id="Gs8-xC-N0Y" customClass="ArtistsListCollectionViewController" customModule="ReduxExampleLastFM" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oPe-7C-e6m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WPC-0c-grt">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="Gs8-xC-N0Y" id="lIB-dq-jhC"/>
+                            <outlet property="delegate" destination="Gs8-xC-N0Y" id="gVh-3M-T1G"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Collection" id="hUk-WO-FLE"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHn-t0-HEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="513"/>
+        </scene>
+    </scenes>
+</document>

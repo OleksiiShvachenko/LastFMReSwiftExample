@@ -1,0 +1,6 @@
+framework module Pods_ReduxExampleLastFM {
+  umbrella header "Pods-ReduxExampleLastFM-umbrella.h"
+
+  export *
+  module * { export * }
+}

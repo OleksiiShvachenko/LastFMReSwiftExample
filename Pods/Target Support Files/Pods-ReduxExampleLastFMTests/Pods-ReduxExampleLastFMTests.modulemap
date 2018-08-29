@@ -1,0 +1,6 @@
+framework module Pods_ReduxExampleLastFMTests {
+  umbrella header "Pods-ReduxExampleLastFMTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
