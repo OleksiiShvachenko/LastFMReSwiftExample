@@ -32,18 +32,19 @@ extension ArtistState {
     }
   }
   
-  public enum Actions: Action {
+  enum Actions: Action {
     case setArtist(Artist)
     case setAlbums([Album])
     case loadAlbums(artistMbid: String)
-
-    public static func selectArtist(_ artist: Artist) -> Store<AppState>.ActionCreator {
+  }
+  
+  enum ActionCreators {
+    static func selectArtist(_ artist: Artist) -> Store<AppState>.ActionCreator {
       return { state, store in
         store.dispatch(ArtistState.Actions.setAlbums([]))
         store.dispatch(Actions.loadAlbums(artistMbid: artist.mbid))
         return Actions.setArtist(artist)
       }
     }
-
   }
 }

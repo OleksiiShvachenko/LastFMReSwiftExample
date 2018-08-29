@@ -20,7 +20,7 @@ class CountryArtistsTests: XCTestCase {
     let sessionManager = StubSessionManager([artistsStub])
     let store = createStore(sessionManager)
     store.dispatch(CountryArtistsState.Actions.loadArtists(stubCountry))
-    XCTAssertTrue(store.state.countryState.artists.count > 0)
+    XCTAssertTrue(store.state.artistsByCountryState.artists.count > 0)
   }
   
   func testLoadArtistsFailed() {
@@ -32,7 +32,7 @@ class CountryArtistsTests: XCTestCase {
     let sessionManager = StubSessionManager([artistsStub])
     let store = createStore(sessionManager)
     store.dispatch(CountryArtistsState.Actions.loadArtists(stubCountry))
-    XCTAssertTrue(store.state.countryState.artists.count == 0)
+    XCTAssertTrue(store.state.artistsByCountryState.artists.count == 0)
     XCTAssertEqual(error.stringValue, store.state.errorState.generalErrorMessage)
   }
   
@@ -43,9 +43,9 @@ class CountryArtistsTests: XCTestCase {
     let artistsStub = Stub(result: result, url: api.url, method: api.method)
     let sessionManager = StubSessionManager([artistsStub])
     let store = createStore(sessionManager)
-    store.dispatch(CountryArtistsState.Actions.selectCountry(stubCountry))
-    XCTAssertEqual(store.state.countryState.country.rawValue, stubCountry.rawValue)
-    XCTAssertTrue(store.state.countryState.artists.count > 0)
+    store.dispatch(CountryArtistsState.ActionCreators.selectCountry(stubCountry))
+    XCTAssertEqual(store.state.artistsByCountryState.country.rawValue, stubCountry.rawValue)
+    XCTAssertTrue(store.state.artistsByCountryState.artists.count > 0)
   }
   
 }

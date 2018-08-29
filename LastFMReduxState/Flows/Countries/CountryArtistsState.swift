@@ -32,16 +32,19 @@ extension CountryArtistsState {
     }
   }
   
-  public enum Actions: Action {
+  enum Actions: Action {
     case setArtists([Artist])
     case setCountry(Country)
     case loadArtists(Country)
+  }
+  
+  public enum ActionCreators {
     
     public static func didTapOnArtist(at index: Int) -> Store<AppState>.ActionCreator {
       return { state, store in
         guard index < state.artistsByCountryState.artists.count else { fatalError() }
         let artist = state.artistsByCountryState.artists[index]
-        store.dispatch(ArtistState.Actions.selectArtist(artist))
+        store.dispatch(ArtistState.ActionCreators.selectArtist(artist))
         return nil
       }
     }
@@ -52,6 +55,5 @@ extension CountryArtistsState {
         return Actions.setCountry(country)
       }
     }
-    
   }
 }

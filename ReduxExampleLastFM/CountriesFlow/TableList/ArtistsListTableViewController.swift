@@ -57,7 +57,7 @@ extension ArtistsListTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        mainStore.dispatch(CountryArtistsState.Actions.didTapOnArtist(at: indexPath.row))
+        mainStore.dispatch(CountryArtistsState.ActionCreators.didTapOnArtist(at: indexPath.row))
         guard let controller = AppStoryboard.artist.initialViewController else { fatalError() }
         navigationController?.show(controller, sender: nil)
     }

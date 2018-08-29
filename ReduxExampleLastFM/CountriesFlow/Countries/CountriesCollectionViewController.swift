@@ -47,7 +47,7 @@ extension CountriesCollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    mainStore.dispatch(CountryArtistsState.Actions.selectCountry(Country.all[indexPath.row]))
+    mainStore.dispatch(CountryArtistsState.ActionCreators.selectCountry(Country.all[indexPath.row]))
     dismiss(animated: true, completion: nil)
   }
 }

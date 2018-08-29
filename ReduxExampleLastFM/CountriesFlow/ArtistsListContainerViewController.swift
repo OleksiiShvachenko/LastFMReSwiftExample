@@ -35,7 +35,7 @@ class ArtistsListContainerViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    mainStore.dispatch(CountryArtistsState.Actions.selectCountry(.ukraine))
+    mainStore.dispatch(CountryArtistsState.ActionCreators.selectCountry(.ukraine))
   }
   
   override func viewWillAppear(_ animated: Bool) {

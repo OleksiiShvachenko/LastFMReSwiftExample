@@ -33,7 +33,7 @@ class ArtistTests: XCTestCase {
     let sessionManager = StubSessionManager([albumsStub])
     let store = createStore(sessionManager)
     store.dispatch(CountryArtistsState.Actions.setArtists([stubArtist]))
-    store.dispatch(CountryArtistsState.Actions.didTapOnArtist(at: 0))
+    store.dispatch(CountryArtistsState.ActionCreators.didTapOnArtist(at: 0))
     XCTAssertTrue(store.state.artistAlbumsState.albums.count > 0)
     XCTAssertNotNil(store.state.artistAlbumsState.artist)
   }
@@ -47,7 +47,7 @@ class ArtistTests: XCTestCase {
     let sessionManager = StubSessionManager([albumsStub])
     let store = createStore(sessionManager)
     store.dispatch(CountryArtistsState.Actions.setArtists([stubArtist]))
-    store.dispatch(CountryArtistsState.Actions.didTapOnArtist(at: 0))
+    store.dispatch(CountryArtistsState.ActionCreators.didTapOnArtist(at: 0))
     XCTAssertTrue(store.state.artistAlbumsState.albums.count == 0)
     XCTAssertNotNil(store.state.artistAlbumsState.artist)
     XCTAssertNil(store.state.errorState.generalErrorMessage)
