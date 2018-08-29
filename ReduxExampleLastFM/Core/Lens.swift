@@ -17,6 +17,6 @@ protocol Lens {
 
 extension Lens {
     static func filter(old: ResultState, new: ResultState) -> Bool {
-        return true
+        return false
     }
 }

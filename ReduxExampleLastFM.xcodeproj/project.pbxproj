@@ -602,8 +602,8 @@
 			projectRoot = "";
 			targets = (
 				7419AFFC1EE806E500AAF810 /* ReduxExampleLastFM */,
-				7419B0101EE806E500AAF810 /* ReduxExampleLastFMTests */,
 				188ACDCC213553F100A374DC /* LastFMReduxState */,
+				7419B0101EE806E500AAF810 /* ReduxExampleLastFMTests */,
 			);
 		};
 /* End PBXProject section */
