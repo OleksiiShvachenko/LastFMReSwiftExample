@@ -13,9 +13,6 @@ public struct AppState: StateType {
   public let errorState: ErrorState
 }
 
-
-
-
 extension AppState {
   static func appReducer(action: Action, state: AppState?) -> AppState {
     return AppState(
