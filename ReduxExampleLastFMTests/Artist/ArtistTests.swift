@@ -34,8 +34,8 @@ class ArtistTests: XCTestCase {
     let store = createStore(sessionManager)
     store.dispatch(CountryArtistsState.Actions.setArtists([stubArtist]))
     store.dispatch(CountryArtistsState.Actions.didTapOnArtist(at: 0))
-    XCTAssertTrue(store.state.artistState.albums.count > 0)
-    XCTAssertNotNil(store.state.artistState.artist)
+    XCTAssertTrue(store.state.artistAlbumsState.albums.count > 0)
+    XCTAssertNotNil(store.state.artistAlbumsState.artist)
   }
   
   func testLoadAlbumsForSelectedArtistFail() {
@@ -48,8 +48,8 @@ class ArtistTests: XCTestCase {
     let store = createStore(sessionManager)
     store.dispatch(CountryArtistsState.Actions.setArtists([stubArtist]))
     store.dispatch(CountryArtistsState.Actions.didTapOnArtist(at: 0))
-    XCTAssertTrue(store.state.artistState.albums.count == 0)
-    XCTAssertNotNil(store.state.artistState.artist)
+    XCTAssertTrue(store.state.artistAlbumsState.albums.count == 0)
+    XCTAssertNotNil(store.state.artistAlbumsState.artist)
     XCTAssertNil(store.state.errorState.generalErrorMessage)
   }
   

@@ -8,16 +8,19 @@
 import ReSwift
 
 public struct AppState: StateType {
-  public let countryState: CountryArtistsState
-  public let artistState: ArtistState
+  public let artistsByCountryState: CountryArtistsState
+  public let artistAlbumsState: ArtistState
   public let errorState: ErrorState
 }
+
+
+
 
 extension AppState {
   static func appReducer(action: Action, state: AppState?) -> AppState {
     return AppState(
-      countryState: CountryArtistsState.Reducer.handleAction(action: action, state: state?.countryState),
-      artistState: ArtistState.Reducer.handleAction(action: action, state: state?.artistState),
+      artistsByCountryState: CountryArtistsState.Reducer.handleAction(action: action, state: state?.artistsByCountryState),
+      artistAlbumsState: ArtistState.Reducer.handleAction(action: action, state: state?.artistAlbumsState),
       errorState: ErrorState.Reducer.handleAction(action: action, state: state?.errorState)
     )
   }

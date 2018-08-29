@@ -12,7 +12,7 @@ import LastFMReduxState
 
 struct ArtistLens: Lens {
     static func lens(_ state: AppState) -> (info: (albums: [Album], artist: Artist?), error: String?) {
-        return ((state.artistState.albums, state.artistState.artist), state.errorState.generalErrorMessage)
+        return ((state.artistAlbumsState.albums, state.artistAlbumsState.artist), state.errorState.generalErrorMessage)
     }
     
     static func filter(old: (info: (albums: [Album], artist: Artist?), error: String?),

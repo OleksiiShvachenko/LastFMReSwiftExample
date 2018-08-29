@@ -12,7 +12,7 @@ import LastFMReduxState
 
 struct ArtistsListContainerLens: Lens {
   static func lens(_ state: AppState) -> Country {
-    return state.countryState.country
+    return state.artistsByCountryState.country
   }
 }
 

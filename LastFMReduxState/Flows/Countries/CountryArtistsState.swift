@@ -39,8 +39,8 @@ extension CountryArtistsState {
     
     public static func didTapOnArtist(at index: Int) -> Store<AppState>.ActionCreator {
       return { state, store in
-        guard index < state.countryState.artists.count else { fatalError() }
-        let artist = state.countryState.artists[index]
+        guard index < state.artistsByCountryState.artists.count else { fatalError() }
+        let artist = state.artistsByCountryState.artists[index]
         store.dispatch(ArtistState.Actions.selectArtist(artist))
         return nil
       }
