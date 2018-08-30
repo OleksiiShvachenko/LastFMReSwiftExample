@@ -47,5 +47,4 @@ class CountryArtistsTests: XCTestCase {
     XCTAssertEqual(store.state.artistsByCountryState.country.rawValue, stubCountry.rawValue)
     XCTAssertTrue(store.state.artistsByCountryState.artists.count > 0)
   }
-  
 }

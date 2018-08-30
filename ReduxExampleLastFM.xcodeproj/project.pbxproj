@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		181AF2902136BF1F0094A887 /* StubSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AF28F2136BF1F0094A887 /* StubSessionManager.swift */; };
+		181AF2942137E4F10094A887 /* CountryArtistsMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AF2932137E4F10094A887 /* CountryArtistsMiddlewareTests.swift */; };
+		181AF2962137E80E0094A887 /* BaseMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AF2952137E80E0094A887 /* BaseMiddlewareTests.swift */; };
 		188ACDD1213553F100A374DC /* LastFMReduxState.h in Headers */ = {isa = PBXBuildFile; fileRef = 188ACDCF213553F100A374DC /* LastFMReduxState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		188ACDD4213553F100A374DC /* LastFMReduxState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188ACDCD213553F100A374DC /* LastFMReduxState.framework */; };
 		188ACDD5213553F100A374DC /* LastFMReduxState.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 188ACDCD213553F100A374DC /* LastFMReduxState.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -101,6 +103,8 @@
 /* Begin PBXFileReference section */
 		06B1BBD10A508C3A51151B8D /* Pods-ReduxExampleLastFMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFMTests/Pods-ReduxExampleLastFMTests.release.xcconfig"; sourceTree = "<group>"; };
 		181AF28F2136BF1F0094A887 /* StubSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSessionManager.swift; sourceTree = "<group>"; };
+		181AF2932137E4F10094A887 /* CountryArtistsMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryArtistsMiddlewareTests.swift; sourceTree = "<group>"; };
+		181AF2952137E80E0094A887 /* BaseMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMiddlewareTests.swift; sourceTree = "<group>"; };
 		188ACDCD213553F100A374DC /* LastFMReduxState.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LastFMReduxState.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		188ACDCF213553F100A374DC /* LastFMReduxState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LastFMReduxState.h; sourceTree = "<group>"; };
 		188ACDD0213553F100A374DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				181AF28F2136BF1F0094A887 /* StubSessionManager.swift */,
+				181AF2952137E80E0094A887 /* BaseMiddlewareTests.swift */,
 				7491E7621EE9715D00C4F4F2 /* Artist */,
 				7491E7451EE84BCA00C4F4F2 /* CountryArtists */,
 				7419B0171EE806E500AAF810 /* Info.plist */,
@@ -456,6 +461,7 @@
 			children = (
 				7491E7461EE84BE300C4F4F2 /* CountryArtistsTests.swift */,
 				7491E7481EE84C9400C4F4F2 /* ArtistsResult.json */,
+				181AF2932137E4F10094A887 /* CountryArtistsMiddlewareTests.swift */,
 			);
 			path = CountryArtists;
 			sourceTree = "<group>";
@@ -814,6 +820,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7491E7471EE84BE300C4F4F2 /* CountryArtistsTests.swift in Sources */,
+				181AF2942137E4F10094A887 /* CountryArtistsMiddlewareTests.swift in Sources */,
+				181AF2962137E80E0094A887 /* BaseMiddlewareTests.swift in Sources */,
 				181AF2902136BF1F0094A887 /* StubSessionManager.swift in Sources */,
 				7491E7641EE9717200C4F4F2 /* ArtistTests.swift in Sources */,
 			);
