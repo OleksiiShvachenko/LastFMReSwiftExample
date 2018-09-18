@@ -24,7 +24,7 @@ class ArtistsListCollectionViewController: UICollectionViewController {
         collectionView?.register(ArtistCollectionViewCell.nib,
                                  forCellWithReuseIdentifier: ArtistCollectionViewCell.identifier)
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 100, height: 30)
+            flowLayout.estimatedItemSize = CGSize(width: 140, height: 140)
         }
         collectionView?.contentInset = UIEdgeInsets.zero
     }

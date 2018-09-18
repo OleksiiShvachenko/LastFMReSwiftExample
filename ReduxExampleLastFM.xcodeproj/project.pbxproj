@@ -29,8 +29,8 @@
 		188ACE02213589EB00A374DC /* NetworkMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACE01213589EB00A374DC /* NetworkMiddleware.swift */; };
 		188ACE0421358A0300A374DC /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACE0321358A0300A374DC /* Middleware.swift */; };
 		188ACE0621358D2600A374DC /* NetworkActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACE0521358D2600A374DC /* NetworkActions.swift */; };
-		4CA3C0925F69B615C8D9D524 /* Pods_ReduxExampleLastFM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98899F66F9C4C49C20FE752E /* Pods_ReduxExampleLastFM.framework */; };
-		54D738BF06FEEFEE86BAC93B /* Pods_LastFMReduxState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D42A67470136BC4F6C7CD52 /* Pods_LastFMReduxState.framework */; };
+		600FEAFA4AE0D6390F7F309D /* Pods_ReduxExampleLastFM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C739114FB169BE945695D300 /* Pods_ReduxExampleLastFM.framework */; };
+		64D94B3FF308BCBB548F283F /* Pods_ReduxExampleLastFMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9F0760EACFE5DEE99DEA62 /* Pods_ReduxExampleLastFMTests.framework */; };
 		7419B0011EE806E500AAF810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0001EE806E500AAF810 /* AppDelegate.swift */; };
 		7419B0081EE806E500AAF810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7419B0071EE806E500AAF810 /* Assets.xcassets */; };
 		7419B00B1EE806E500AAF810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7419B0091EE806E500AAF810 /* LaunchScreen.storyboard */; };
@@ -66,7 +66,7 @@
 		7491E75E1EE964EB00C4F4F2 /* AlbumListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7491E75C1EE964EB00C4F4F2 /* AlbumListTableViewCell.xib */; };
 		7491E7641EE9717200C4F4F2 /* ArtistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491E7631EE9717200C4F4F2 /* ArtistTests.swift */; };
 		7491E7681EE9719500C4F4F2 /* AlbumsResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 7491E7671EE9719500C4F4F2 /* AlbumsResults.json */; };
-		BB871BB5AF3BB13452D52495 /* Pods_ReduxExampleLastFMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AD3D8651072A1AF4AFF359 /* Pods_ReduxExampleLastFMTests.framework */; };
+		8235F84089A8962E9D041B4A /* Pods_LastFMReduxState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B7BC0DC746CA346C9615FC /* Pods_LastFMReduxState.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +101,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		06B1BBD10A508C3A51151B8D /* Pods-ReduxExampleLastFMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFMTests/Pods-ReduxExampleLastFMTests.release.xcconfig"; sourceTree = "<group>"; };
 		181AF28F2136BF1F0094A887 /* StubSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSessionManager.swift; sourceTree = "<group>"; };
 		181AF2932137E4F10094A887 /* CountryArtistsMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryArtistsMiddlewareTests.swift; sourceTree = "<group>"; };
 		181AF2952137E80E0094A887 /* BaseMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMiddlewareTests.swift; sourceTree = "<group>"; };
@@ -111,11 +110,9 @@
 		188ACE01213589EB00A374DC /* NetworkMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMiddleware.swift; sourceTree = "<group>"; };
 		188ACE0321358A0300A374DC /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		188ACE0521358D2600A374DC /* NetworkActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActions.swift; sourceTree = "<group>"; };
-		33AD3D8651072A1AF4AFF359 /* Pods_ReduxExampleLastFMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxExampleLastFMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C6010EB5B321654E9404EB6 /* Pods-ReduxExampleLastFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM.release.xcconfig"; sourceTree = "<group>"; };
-		4D42A67470136BC4F6C7CD52 /* Pods_LastFMReduxState.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LastFMReduxState.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ECE6C625076EC48B46780F2 /* Pods-LastFMReduxState.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFMReduxState.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LastFMReduxState/Pods-LastFMReduxState.debug.xcconfig"; sourceTree = "<group>"; };
-		677EFB8E1899E5C3D3FA0F48 /* Pods-ReduxExampleLastFMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFMTests/Pods-ReduxExampleLastFMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		41846523C7988161C42F73D4 /* Pods-ReduxExampleLastFMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFMTests/Pods-ReduxExampleLastFMTests.release.xcconfig"; sourceTree = "<group>"; };
+		459A1936A7FC1FC3843F77E8 /* Pods-ReduxExampleLastFMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFMTests/Pods-ReduxExampleLastFMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		63849BFAA0EE1626D3112482 /* Pods-ReduxExampleLastFM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM.debug.xcconfig"; sourceTree = "<group>"; };
 		7419AFFD1EE806E500AAF810 /* ReduxExampleLastFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxExampleLastFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7419B0001EE806E500AAF810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7419B0071EE806E500AAF810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,9 +165,12 @@
 		7491E75C1EE964EB00C4F4F2 /* AlbumListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumListTableViewCell.xib; sourceTree = "<group>"; };
 		7491E7631EE9717200C4F4F2 /* ArtistTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTests.swift; sourceTree = "<group>"; };
 		7491E7671EE9719500C4F4F2 /* AlbumsResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AlbumsResults.json; sourceTree = "<group>"; };
-		98899F66F9C4C49C20FE752E /* Pods_ReduxExampleLastFM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxExampleLastFM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C8CA094C4C6CAC620CEFE65 /* Pods-LastFMReduxState.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFMReduxState.release.xcconfig"; path = "Pods/Target Support Files/Pods-LastFMReduxState/Pods-LastFMReduxState.release.xcconfig"; sourceTree = "<group>"; };
-		BDD6C144E86EC4ECC2422903 /* Pods-ReduxExampleLastFM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM.debug.xcconfig"; sourceTree = "<group>"; };
+		8F7F597C1DFEAE4352C3E1DE /* Pods-LastFMReduxState.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFMReduxState.release.xcconfig"; path = "Pods/Target Support Files/Pods-LastFMReduxState/Pods-LastFMReduxState.release.xcconfig"; sourceTree = "<group>"; };
+		BCF868897CA7E8D11A1ED938 /* Pods-ReduxExampleLastFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM.release.xcconfig"; sourceTree = "<group>"; };
+		C739114FB169BE945695D300 /* Pods_ReduxExampleLastFM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxExampleLastFM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B7BC0DC746CA346C9615FC /* Pods_LastFMReduxState.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LastFMReduxState.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9F0760EACFE5DEE99DEA62 /* Pods_ReduxExampleLastFMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxExampleLastFMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED62F8C13389F120A6C1552F /* Pods-LastFMReduxState.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFMReduxState.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LastFMReduxState/Pods-LastFMReduxState.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54D738BF06FEEFEE86BAC93B /* Pods_LastFMReduxState.framework in Frameworks */,
+				8235F84089A8962E9D041B4A /* Pods_LastFMReduxState.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188ACDD4213553F100A374DC /* LastFMReduxState.framework in Frameworks */,
-				4CA3C0925F69B615C8D9D524 /* Pods_ReduxExampleLastFM.framework in Frameworks */,
+				600FEAFA4AE0D6390F7F309D /* Pods_ReduxExampleLastFM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,26 +195,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB871BB5AF3BB13452D52495 /* Pods_ReduxExampleLastFMTests.framework in Frameworks */,
+				64D94B3FF308BCBB548F283F /* Pods_ReduxExampleLastFMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09ABB03D2097FC9451FED9E0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5ECE6C625076EC48B46780F2 /* Pods-LastFMReduxState.debug.xcconfig */,
-				9C8CA094C4C6CAC620CEFE65 /* Pods-LastFMReduxState.release.xcconfig */,
-				BDD6C144E86EC4ECC2422903 /* Pods-ReduxExampleLastFM.debug.xcconfig */,
-				4C6010EB5B321654E9404EB6 /* Pods-ReduxExampleLastFM.release.xcconfig */,
-				677EFB8E1899E5C3D3FA0F48 /* Pods-ReduxExampleLastFMTests.debug.xcconfig */,
-				06B1BBD10A508C3A51151B8D /* Pods-ReduxExampleLastFMTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		188ACDCE213553F100A374DC /* LastFMReduxState */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,8 +268,8 @@
 				188ACDCE213553F100A374DC /* LastFMReduxState */,
 				7419B0141EE806E500AAF810 /* ReduxExampleLastFMTests */,
 				7419AFFE1EE806E500AAF810 /* Products */,
-				80687FBF43B202DC277EC796 /* Frameworks */,
-				09ABB03D2097FC9451FED9E0 /* Pods */,
+				E8F92A4A0C6C68CF4B1137EA /* Pods */,
+				BB3C497C19D34FDE774A43F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -484,14 +471,27 @@
 			path = Artist;
 			sourceTree = "<group>";
 		};
-		80687FBF43B202DC277EC796 /* Frameworks */ = {
+		BB3C497C19D34FDE774A43F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4D42A67470136BC4F6C7CD52 /* Pods_LastFMReduxState.framework */,
-				98899F66F9C4C49C20FE752E /* Pods_ReduxExampleLastFM.framework */,
-				33AD3D8651072A1AF4AFF359 /* Pods_ReduxExampleLastFMTests.framework */,
+				D4B7BC0DC746CA346C9615FC /* Pods_LastFMReduxState.framework */,
+				C739114FB169BE945695D300 /* Pods_ReduxExampleLastFM.framework */,
+				DD9F0760EACFE5DEE99DEA62 /* Pods_ReduxExampleLastFMTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8F92A4A0C6C68CF4B1137EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED62F8C13389F120A6C1552F /* Pods-LastFMReduxState.debug.xcconfig */,
+				8F7F597C1DFEAE4352C3E1DE /* Pods-LastFMReduxState.release.xcconfig */,
+				63849BFAA0EE1626D3112482 /* Pods-ReduxExampleLastFM.debug.xcconfig */,
+				BCF868897CA7E8D11A1ED938 /* Pods-ReduxExampleLastFM.release.xcconfig */,
+				459A1936A7FC1FC3843F77E8 /* Pods-ReduxExampleLastFMTests.debug.xcconfig */,
+				41846523C7988161C42F73D4 /* Pods-ReduxExampleLastFMTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,7 +512,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188ACDD6213553F100A374DC /* Build configuration list for PBXNativeTarget "LastFMReduxState" */;
 			buildPhases = (
-				EBE6AA5F8DA922D0BF271503 /* [CP] Check Pods Manifest.lock */,
+				9B858A8B5F5D01D01A688F15 /* [CP] Check Pods Manifest.lock */,
 				188ACDC8213553F100A374DC /* Sources */,
 				188ACDC9213553F100A374DC /* Frameworks */,
 				188ACDCA213553F100A374DC /* Headers */,
@@ -531,12 +531,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7419B0251EE806E500AAF810 /* Build configuration list for PBXNativeTarget "ReduxExampleLastFM" */;
 			buildPhases = (
-				38A8473E7225B5BD65A7604E /* [CP] Check Pods Manifest.lock */,
+				4632F01CCB4A51FE1710733B /* [CP] Check Pods Manifest.lock */,
 				7419AFF91EE806E500AAF810 /* Sources */,
 				7419AFFA1EE806E500AAF810 /* Frameworks */,
 				7419AFFB1EE806E500AAF810 /* Resources */,
 				188ACDD9213553F100A374DC /* Embed Frameworks */,
-				73122F9D9FC834FAAB918302 /* [CP] Embed Pods Frameworks */,
+				827177646C999B0477281378 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -552,11 +552,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7419B0281EE806E500AAF810 /* Build configuration list for PBXNativeTarget "ReduxExampleLastFMTests" */;
 			buildPhases = (
-				AEF19177CCE29D21F9A72A1D /* [CP] Check Pods Manifest.lock */,
+				F62E7CB8C76A05BD07D38B5A /* [CP] Check Pods Manifest.lock */,
 				7419B00D1EE806E500AAF810 /* Sources */,
 				7419B00E1EE806E500AAF810 /* Frameworks */,
 				7419B00F1EE806E500AAF810 /* Resources */,
-				99477E9CB167358A8C9043F9 /* [CP] Embed Pods Frameworks */,
+				815EE0890EF081B47AF4C6B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -580,10 +580,13 @@
 				TargetAttributes = {
 					188ACDCC213553F100A374DC = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					7419AFFC1EE806E500AAF810 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = MM4NKSSYPK;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					7419B0101EE806E500AAF810 = {
@@ -649,16 +652,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38A8473E7225B5BD65A7604E /* [CP] Check Pods Manifest.lock */ = {
+		4632F01CCB4A51FE1710733B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ReduxExampleLastFM-checkManifestLockResult.txt",
 			);
@@ -667,38 +674,12 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		73122F9D9FC834FAAB918302 /* [CP] Embed Pods Frameworks */ = {
+		815EE0890EF081B47AF4C6B9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
-				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99477E9CB167358A8C9043F9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReduxExampleLastFMTests/Pods-ReduxExampleLastFMTests-frameworks.sh",
@@ -710,6 +691,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
@@ -723,36 +706,76 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReduxExampleLastFMTests/Pods-ReduxExampleLastFMTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AEF19177CCE29D21F9A72A1D /* [CP] Check Pods Manifest.lock */ = {
+		827177646C999B0477281378 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B858A8B5F5D01D01A688F15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReduxExampleLastFMTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LastFMReduxState-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EBE6AA5F8DA922D0BF271503 /* [CP] Check Pods Manifest.lock */ = {
+		F62E7CB8C76A05BD07D38B5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LastFMReduxState-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ReduxExampleLastFMTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -856,7 +879,7 @@
 /* Begin XCBuildConfiguration section */
 		188ACDD7213553F100A374DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ECE6C625076EC48B46780F2 /* Pods-LastFMReduxState.debug.xcconfig */;
+			baseConfigurationReference = ED62F8C13389F120A6C1552F /* Pods-LastFMReduxState.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -876,7 +899,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ciklum.LastFMReduxState;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -885,7 +908,7 @@
 		};
 		188ACDD8213553F100A374DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C8CA094C4C6CAC620CEFE65 /* Pods-LastFMReduxState.release.xcconfig */;
+			baseConfigurationReference = 8F7F597C1DFEAE4352C3E1DE /* Pods-LastFMReduxState.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -905,7 +928,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ciklum.LastFMReduxState;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -967,7 +990,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1019,7 +1042,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1027,37 +1050,39 @@
 		};
 		7419B0261EE806E500AAF810 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDD6C144E86EC4ECC2422903 /* Pods-ReduxExampleLastFM.debug.xcconfig */;
+			baseConfigurationReference = 63849BFAA0EE1626D3112482 /* Pods-ReduxExampleLastFM.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MM4NKSSYPK;
 				INFOPLIST_FILE = ReduxExampleLastFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ciklum.ReduxExampleLastFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		7419B0271EE806E500AAF810 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C6010EB5B321654E9404EB6 /* Pods-ReduxExampleLastFM.release.xcconfig */;
+			baseConfigurationReference = BCF868897CA7E8D11A1ED938 /* Pods-ReduxExampleLastFM.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MM4NKSSYPK;
 				INFOPLIST_FILE = ReduxExampleLastFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ciklum.ReduxExampleLastFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		7419B0291EE806E500AAF810 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 677EFB8E1899E5C3D3FA0F48 /* Pods-ReduxExampleLastFMTests.debug.xcconfig */;
+			baseConfigurationReference = 459A1936A7FC1FC3843F77E8 /* Pods-ReduxExampleLastFMTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = Z323B543DW;
@@ -1071,7 +1096,7 @@
 		};
 		7419B02A1EE806E500AAF810 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06B1BBD10A508C3A51151B8D /* Pods-ReduxExampleLastFMTests.release.xcconfig */;
+			baseConfigurationReference = 41846523C7988161C42F73D4 /* Pods-ReduxExampleLastFMTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = Z323B543DW;

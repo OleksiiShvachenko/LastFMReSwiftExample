@@ -24,7 +24,7 @@ class ArtistsListTableViewController: UITableViewController {
         tableView.register(ArtistTableViewCell.nib, forCellReuseIdentifier: ArtistTableViewCell.identifier)
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 130
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -18,7 +18,7 @@ struct ArtistsListContainerLens: Lens {
 
 class CustomTitleView: UIView {
   override var intrinsicContentSize: CGSize {
-    return UILayoutFittingExpandedSize
+    return UIView.layoutFittingExpandedSize
   }
 }
 
