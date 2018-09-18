@@ -1058,7 +1058,7 @@
 				DEVELOPMENT_TEAM = MM4NKSSYPK;
 				INFOPLIST_FILE = ReduxExampleLastFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Ciklum.ReduxExampleLastFM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ciklum.ReduxExampleLastFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -1074,7 +1074,7 @@
 				DEVELOPMENT_TEAM = MM4NKSSYPK;
 				INFOPLIST_FILE = ReduxExampleLastFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Ciklum.ReduxExampleLastFM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ciklum.ReduxExampleLastFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
