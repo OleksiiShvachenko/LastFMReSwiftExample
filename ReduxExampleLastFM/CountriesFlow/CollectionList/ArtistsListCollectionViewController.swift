@@ -10,6 +10,24 @@ import UIKit
 import ReSwift
 import LastFMReduxState
 
+class AutoLayoutCollectionView: UICollectionView {
+  
+  private var shouldInvalidateLayout = false
+
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    if shouldInvalidateLayout {
+      collectionViewLayout.invalidateLayout()
+      shouldInvalidateLayout = false
+    }
+  }
+
+  override func reloadData() {
+    shouldInvalidateLayout = true
+    super.reloadData()
+  }
+}
+
 class ArtistsListCollectionViewController: UICollectionViewController {
     
     struct Model: ViewControllerModel {
@@ -24,7 +42,7 @@ class ArtistsListCollectionViewController: UICollectionViewController {
         collectionView?.register(ArtistCollectionViewCell.nib,
                                  forCellWithReuseIdentifier: ArtistCollectionViewCell.identifier)
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 140, height: 140)
+            flowLayout.estimatedItemSize = CGSize(width: 160, height: 30)
         }
         collectionView?.contentInset = UIEdgeInsets.zero
     }
