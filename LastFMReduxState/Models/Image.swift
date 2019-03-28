@@ -5,11 +5,10 @@
 //  Created by YevhenHerasymenko on 6/7/17.
 //  Copyright © 2017 Ciklum. All rights reserved.
 //
+import Foundation
 
-import ObjectMapper
-
-public struct Image: ImmutableMappable {
-  public enum Size: String {
+public struct Image: Decodable {
+  public enum Size: String, Decodable {
     case small
     case medium
     case large
@@ -21,8 +20,8 @@ public struct Image: ImmutableMappable {
   public let url: URL?
   public let size: Size
   
-  public init(map: Map) throws {
-    url = try? map.value("#text", using: URL.transformString)
-    size = (try? map.value("size", using: Size.transform)) ?? .unowned
+  enum CodingKeys : String, CodingKey {
+    case url = "#text" // try? map.value("#text", using: URL.transformString)
+    case size = "size" // (try? map.value("size", using: Size.transform)) ?? .unowned
   }
 }

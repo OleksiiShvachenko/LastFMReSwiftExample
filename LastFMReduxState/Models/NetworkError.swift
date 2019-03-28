@@ -5,17 +5,15 @@
 //  Copyright © 2017 Yevhen Herasymenko. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
 public enum NetworkError: Error {
   
-  public struct ServerError: ImmutableMappable {
-    private static let key = "Message"
-    
+  public struct ServerError: Decodable {
     let message: String?
     
-    public init(map: Map) throws {
-      message = try? map.value(ServerError.key)
+    enum CodingKeys : String, CodingKey {
+      case message = "Message"
     }
   }
   
@@ -42,12 +40,11 @@ public enum NetworkError: Error {
   case parsingError(String?)
   case unknown(String?)
   
-  public init(statusCode: Int, error: [String: AnyObject]? = nil) {
+  public init(statusCode: Int, errorData: Data? = nil) {
     let message: String?
-    if let dictionary = error {
-      let serverError: ServerError? = try? Mapper<ServerError>().map(JSON: dictionary)
+    if let errorData = errorData {
+      let serverError: ServerError? = try? JSONDecoder().decode(ServerError.self, from: errorData)
       message = serverError?.message
-      
     } else {
       message = nil
     }

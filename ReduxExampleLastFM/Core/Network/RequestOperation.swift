@@ -54,13 +54,12 @@ class RequestOperation: BasicOperation {
                //encoding: encoding ?? JSONEncoding.default,
         headers: headers)
       .validate(statusCode: 200..<300)
-      .responseJSON { [unowned self] response in
+      .responseData { [unowned self] response in
         defer {
           self.finish()
         }
         switch response.result {
         case .success(let result):
-          self.checkResult(result as AnyObject)
           guard let header = response.response?.allHeaderFields else { return }
           self.responseHeader.parse(header: header)
         case .failure(let error):
@@ -69,16 +68,8 @@ class RequestOperation: BasicOperation {
             self.error = .unknown("Unexpected no status code!")
             return
           }
-          do {
-            guard let data = response.data,
-              let dictionary = try JSONSerialization.jsonObject(with: data,
-                                                                options: []) as? [String: AnyObject]
-              else { return }
-            self.error = NetworkError(statusCode: statusCode, error: dictionary)
-          } catch {
-            
-            self.error = NetworkError(statusCode: statusCode)
-          }
+          guard let data = response.data else { return }
+          self.error = NetworkError(statusCode: statusCode, errorData: data)
         }
     }
   }
@@ -99,22 +90,22 @@ class RequestSimpleOperation<T>: RequestOperation {
   
 }
 
-class RequestObjectOperation: RequestOperation {
-  var result: [String: AnyObject]?
-  
-  override func checkResult(_ result: AnyObject) {
-    self.result = result as? [String: AnyObject] ?? [String: AnyObject]()
-  }
-}
-
-class RequestArreyOperation: RequestOperation {
-  var results: [[String: AnyObject]]?
-  
-  override func checkResult(_ result: AnyObject) {
-    guard let resultDict = result as? [[String: AnyObject]] else {
-      self.error = .wrongFormat("result not an array")
-      return
-    }
-    self.results = resultDict
-  }
-}
+//class RequestObjectOperation: RequestOperation {
+//  var result: Data?
+//  
+//  override func checkResult(_ result: AnyObject) {
+//    self.result = result as? [String: AnyObject] ?? [String: AnyObject]()
+//  }
+//}
+//
+//class RequestArreyOperation: RequestOperation {
+//  var results: [[String: AnyObject]]?
+//  
+//  override func checkResult(_ result: AnyObject) {
+//    guard let resultDict = result as? [[String: AnyObject]] else {
+//      self.error = .wrongFormat("result not an array")
+//      return
+//    }
+//    self.results = resultDict
+//  }
+//}

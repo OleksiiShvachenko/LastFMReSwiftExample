@@ -8,11 +8,11 @@
 
 import ReSwift
 
-func loadAlbums(service: APIConformable) -> Middleware {
+func loadAlbums(service: API) -> Middleware {
   return { loadAlbums(action: $0, context: $1, service: service) } 
 }
 
-func loadArtists(service: APIConformable) -> Middleware {
+func loadArtists(service: API) -> Middleware {
   return { loadArtists(action: $0, context: $1, service: service) }
 }
 

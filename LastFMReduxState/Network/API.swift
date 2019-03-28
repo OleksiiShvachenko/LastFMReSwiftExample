@@ -6,23 +6,21 @@
 //  Copyright © 2017 Ciklum. All rights reserved.
 //
 
-import ObjectMapper
-
 /**
  Result for API request
  
  - Failure: error
  - Success: result which was mapped into some model object/objects
  */
-public enum Result<T> {
-  case failure(NetworkError)
-  case success(T)
-}
+import Foundation
 
-public protocol APIConformable {
-  func objectRequest<T: ImmutableMappable>(_ request: Request<T>,
-                                           callback: @escaping ((_ result: Result<T>) -> Void))
-  func arrayRequest<T: ImmutableMappable>(_ request: Request<T>,
-                                          callback: @escaping ((_ result: Result<[T]>) -> Void))
+//public enum Result<T> {
+//  case failure(NetworkError)
+//  case success(T)
+//}
+
+public protocol API {
+  func topArtists(for country: String, callback: @escaping ((_ result: Result<TopArtists, NetworkError>) -> Void))
+  func topAlbums(for artistMbid: String, callback: @escaping ((_ result: Result<TopAlbums, NetworkError>) -> Void))
   func cancel()
 }

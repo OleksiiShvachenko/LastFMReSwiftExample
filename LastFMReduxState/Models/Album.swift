@@ -6,24 +6,24 @@
 //  Copyright © 2017 Ciklum. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
-public struct TopAlbums: ImmutableMappable {
+public struct TopAlbums: Decodable {
   public let albums: [Album]
   
-  public init(map: Map) throws {
-    albums = try map.value("topalbums.album")
+  enum CodingKeys : String, CodingKey {
+    case albums = "topalbums.album"
   }
 }
 
-public struct Album: ImmutableMappable {
+public struct Album: Decodable {
   public let name: String
   public let playcount: Int
   public let images: [Image]
   
-  public init(map: Map) throws {
-    name = try map.value("name")
-    playcount = try map.value("playcount")
-    images = try map.value("image")
+  enum CodingKeys : String, CodingKey {
+    case name = "name"
+    case playcount = "playcount"
+    case images = "image"
   }
 }
