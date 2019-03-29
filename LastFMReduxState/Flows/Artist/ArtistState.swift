@@ -7,6 +7,7 @@
 //
 
 import ReSwift
+import ReSwiftThunk
 
 public struct ArtistState: StateType {
   public var artist: Artist?
@@ -39,11 +40,11 @@ extension ArtistState {
   }
   
   enum ActionCreators {
-    static func selectArtist(_ artist: Artist) -> Store<AppState>.ActionCreator {
-      return { state, store in
-        store.dispatch(ArtistState.Actions.setAlbums([]))
-        store.dispatch(Actions.loadAlbums(artistMbid: artist.mbid))
-        return Actions.setArtist(artist)
+    static func selectArtist(_ artist: Artist) -> Thunk<AppState> {
+      return Thunk<AppState> { dispatch, _ in
+        dispatch(ArtistState.Actions.setAlbums([]))
+        dispatch(Actions.loadAlbums(artistMbid: artist.mbid))
+        dispatch(Actions.setArtist(artist))
       }
     }
   }

@@ -7,6 +7,7 @@
 //
 
 import ReSwift
+import ReSwiftThunk
 
 public struct CountryArtistsState: StateType {
   public var artists: [Artist]
@@ -40,19 +41,19 @@ extension CountryArtistsState {
   
   public enum ActionCreators {
     
-    public static func didTapOnArtist(at index: Int) -> Store<AppState>.ActionCreator {
-      return { state, store in
+    public static func didTapOnArtist(at index: Int) -> Thunk<AppState> {
+      return Thunk<AppState> { dispatch, getState in
+        guard let state = getState() else { return }
         guard index < state.artistsByCountryState.artists.count else { fatalError() }
         let artist = state.artistsByCountryState.artists[index]
-        store.dispatch(ArtistState.ActionCreators.selectArtist(artist))
-        return nil
+        dispatch(ArtistState.ActionCreators.selectArtist(artist))
       }
     }
     
-    public static func selectCountry(_ country: Country) -> Store<AppState>.ActionCreator {
-      return { state, store in
-        store.dispatch(Actions.loadArtists(country))
-        return Actions.setCountry(country)
+    public static func selectCountry(_ country: Country) -> Thunk<AppState> {
+      return Thunk<AppState> { dispatch, getState in
+        dispatch(Actions.loadArtists(country))
+        dispatch(Actions.setCountry(country))
       }
     }
   }

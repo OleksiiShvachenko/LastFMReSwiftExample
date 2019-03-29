@@ -3,12 +3,15 @@ PODS:
   - Hero (1.4.0)
   - Kingfisher (5.3.0)
   - ReSwift (4.1.1)
+  - ReSwiftThunk (1.1.0):
+    - ReSwift (~> 4.0)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0-beta.3)
   - Hero
   - Kingfisher
   - ReSwift
+  - ReSwiftThunk
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,13 +19,15 @@ SPEC REPOS:
     - Hero
     - Kingfisher
     - ReSwift
+    - ReSwiftThunk
 
 SPEC CHECKSUMS:
   Alamofire: 50d6fa7e8cbe7f84559e86ab641ffd029db655f8
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   Kingfisher: 4692c783ffb99e9e2e40a6eb3e518c3b96c6fa8c
   ReSwift: d925be0033558f55bd73d92869961230dfe19d52
+  ReSwiftThunk: 727c1549dbd2949472e1c72bec44b1008d7c4f92
 
-PODFILE CHECKSUM: 6937b569c914bc9b477022690b5e0c8d005b399a
+PODFILE CHECKSUM: ac5e756809b522dd6c0d74a6de021f2edeb5d6cf
 
 COCOAPODS: 1.6.1

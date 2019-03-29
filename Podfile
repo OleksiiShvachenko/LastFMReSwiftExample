@@ -5,6 +5,7 @@ use_frameworks!
 pod 'Hero'
 pod 'Alamofire', '5.0.0-beta.3'
 pod 'ReSwift'
+pod 'ReSwiftThunk'
 pod 'Kingfisher'
 
 target 'ReduxExampleLastFM' do
