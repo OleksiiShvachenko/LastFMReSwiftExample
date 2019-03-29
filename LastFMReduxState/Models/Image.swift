@@ -21,7 +21,13 @@ public struct Image: Decodable {
   public let size: Size
   
   enum CodingKeys : String, CodingKey {
-    case url = "#text" // try? map.value("#text", using: URL.transformString)
-    case size = "size" // (try? map.value("size", using: Size.transform)) ?? .unowned
+    case url = "#text"
+    case size = "size"
+  }
+  
+  public init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    url = try? container.decodeIfPresent(URL.self, forKey: .url)
+    size = try container.decode(Size.self, forKey: .size)
   }
 }

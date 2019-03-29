@@ -12,8 +12,16 @@ public struct TopAlbums: Decodable {
   public let albums: [Album]
   
   enum CodingKeys : String, CodingKey {
-    case albums = "topalbums.album"
+    case container = "topalbums"
+    case album
   }
+  
+  public init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    let nestedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .container)
+    albums = try nestedContainer.decode([Album].self, forKey: .album)
+  }
+  
 }
 
 public struct Album: Decodable {

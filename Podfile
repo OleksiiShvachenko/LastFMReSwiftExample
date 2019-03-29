@@ -3,8 +3,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 pod 'Hero'
-pod 'AlamofireNetworkActivityIndicator'
-pod 'Alamofire'
+pod 'Alamofire', '5.0.0-beta.3'
 pod 'ReSwift'
 pod 'Kingfisher'
 

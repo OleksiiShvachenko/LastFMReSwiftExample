@@ -7,95 +7,48 @@
 
 import Foundation
 import LastFMReduxState
+import Alamofire
 
-final class APIManager: APIConformable {
+final class APIManager: API {
   
-  private let session = URLSession(configuration: .default)
-  
-  func objectRequest<T: Decodable>(_ request: LastFMReduxState.Request<T>,
-                                   callback: @escaping ((_ result: LastFMReduxState.Result<T>) -> Void)) {
-    let url = try! request.requestInfo.url.asURL()
-    let task = session.dataTask(with: url) { data, response, error in
-      
+  func topArtists(for country: String, callback: @escaping ((Swift.Result<TopArtists, NetworkError>) -> Void)) {
+    let params = [
+      "method": "geo.gettopartists",
+      "api_key": "22fe3534d6700d93d59550970657a18d",
+      "format":
+      "json", "country": country
+    ]
+    AF.request("https://ws.audioscrobbler.com/2.0", method: .get, parameters: params).responseDecodable { (response: DataResponse<TopArtists>) in
+      switch response.result {
+      case .success(let artist):
+        callback(Swift.Result.success(artist))
+      case .failure(let error):
+        callback(Swift.Result.failure(self.handleError(error)))
+      }
     }
-    task.resume()
-//    let requestOperation = RequestObjectOperation(request: request.requestInfo)
-//    let parseOperation = ParseObjectOperation<T>()
-//    let adapterOperation = BlockOperation(block: {
-//      guard let result = requestOperation.result else {
-//        parseOperation.cancel()
-//        if let error = requestOperation.error {
-//          DispatchQueue.main.async {
-//            self.handleError(error, callback: callback)
-//          }
-//        }
-//
-//        return
-//      }
-//      parseOperation.jsonData  = result
-//    })
-//    parseOperation.completionBlock = {
-//      DispatchQueue.main.async(execute: {
-//        guard let result = parseOperation.result else {
-//          guard let error = parseOperation.error else { return }
-//          self.handleError(error, callback: callback)
-//          return
-//        }
-//        callback(Result.success(result))
-//      })
-//    }
-//    adapterOperation.addDependency(requestOperation)
-//    parseOperation.addDependency(adapterOperation)
-//    operationQueue.addOperation(requestOperation)
-//    operationQueue.addOperation(adapterOperation)
-//    operationQueue.addOperation(parseOperation)
   }
   
-  func arrayRequest<T: Decodable>(_ request: LastFMReduxState.Request<T>,
-                                  callback: @escaping ((_ result: LastFMReduxState.Result<[T]>) -> Void)) {
-//    let requestOperation = RequestArreyOperation(request: request.requestInfo)
-//    let parseOperation = ParseArrayOperation<T>()
-//    let adapterOperation = BlockOperation(block: {
-//      guard let result = requestOperation.results else {
-//        if let error = requestOperation.error {
-//          DispatchQueue.main.async {
-//            self.handleError(error, callback: callback)
-//          }
-//        }
-//        parseOperation.cancel()
-//        return
-//      }
-//      parseOperation.dictionaries  = result
-//    })
-//    parseOperation.completionBlock = {
-//      DispatchQueue.main.async(execute: {
-//        guard let result = parseOperation.results else {
-//          guard let error = parseOperation.error else { return }
-//          self.handleError(error, callback: callback)
-//          return
-//        }
-//        callback(Result.success(result))
-//      })
-//    }
-//    adapterOperation.addDependency(requestOperation)
-//    parseOperation.addDependency(adapterOperation)
-//    operationQueue.addOperation(requestOperation)
-//    operationQueue.addOperation(adapterOperation)
-//    operationQueue.addOperation(parseOperation)
+  func topAlbums(for artistMbid: String, callback: @escaping ((Swift.Result<TopAlbums, NetworkError>) -> Void)) {
+    let params = [
+      "method": "artist.gettopalbums",
+      "api_key": "22fe3534d6700d93d59550970657a18d",
+      "format": "json",
+      "mbid": artistMbid
+    ]
+    AF.request("https://ws.audioscrobbler.com/2.0", method: .get, parameters: params).responseDecodable { (response: DataResponse<TopAlbums>) in
+      switch response.result {
+      case .success(let albums):
+        callback(Swift.Result.success(albums))
+      case .failure(let error):
+        callback(Swift.Result.failure(self.handleError(error)))
+      }
+    }
   }
   
   func cancel() {
-    operationQueue.cancelAllOperations()
   }
   
-  private func handleError<Type>(_ error: NetworkError,
-                                 callback: @escaping ((_ result: LastFMReduxState.Result<Type>) -> Void)) {
-    //default handler
-    
-    callback(Result.failure(error))
-  }
-  
-  deinit {
-    print("delete")
+  private func handleError(_ error: Error) -> NetworkError {
+    return .parsingError("Test")
   }
 }

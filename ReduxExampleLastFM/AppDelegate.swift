@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     sessionManager = APIManager()
     store = createStore(sessionManager)
-    NetworkActivityIndicator.setup()
     return true
   }
   

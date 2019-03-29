@@ -1,33 +1,28 @@
 PODS:
-  - Alamofire (4.8.2)
-  - AlamofireNetworkActivityIndicator (2.3.0):
-    - Alamofire (~> 4.7)
+  - Alamofire (5.0.0-beta.3)
   - Hero (1.4.0)
   - Kingfisher (5.3.0)
   - ReSwift (4.1.1)
 
 DEPENDENCIES:
-  - Alamofire
-  - AlamofireNetworkActivityIndicator
-  - Hero (~> 1.4.0)
+  - Alamofire (= 5.0.0-beta.3)
+  - Hero
   - Kingfisher
   - ReSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - AlamofireNetworkActivityIndicator
     - Hero
     - Kingfisher
     - ReSwift
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  AlamofireNetworkActivityIndicator: 18346ff6d770d9513d0ac6f2d99706f40f93dbaa
+  Alamofire: 50d6fa7e8cbe7f84559e86ab641ffd029db655f8
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   Kingfisher: 4692c783ffb99e9e2e40a6eb3e518c3b96c6fa8c
   ReSwift: d925be0033558f55bd73d92869961230dfe19d52
 
-PODFILE CHECKSUM: 0b07509920b2f5ee81421ea686a0c9a1dabe10ab
+PODFILE CHECKSUM: 6937b569c914bc9b477022690b5e0c8d005b399a
 
 COCOAPODS: 1.6.1

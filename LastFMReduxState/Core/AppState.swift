@@ -23,7 +23,7 @@ extension AppState {
   }
 }
 
-public func createStore(_ sessionManager: APIConformable) -> Store<AppState> {
+public func createStore(_ sessionManager: API) -> Store<AppState> {
   return Store<AppState>(
     reducer: AppState.appReducer,
     state: nil,
