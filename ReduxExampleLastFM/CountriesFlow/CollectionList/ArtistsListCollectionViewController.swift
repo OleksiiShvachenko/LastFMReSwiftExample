@@ -78,7 +78,7 @@ extension ArtistsListCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        mainStore.dispatch(CountryArtistsState.ActionCreators.didTapOnArtist(at: indexPath.row))
+        mainStore.dispatch(ArtistsState.ActionCreators.didTapOnArtist(at: indexPath.row))
         guard let controller = AppStoryboard.artist.initialViewController else { fatalError() }
         navigationController?.show(controller, sender: nil)
     }

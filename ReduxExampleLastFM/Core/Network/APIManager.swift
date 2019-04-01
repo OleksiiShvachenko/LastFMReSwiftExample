@@ -11,7 +11,7 @@ import Alamofire
 
 final class APIManager: API {
   
-  func topArtists(for country: String, callback: @escaping ((Swift.Result<TopArtists, NetworkError>) -> Void)) {
+  func topArtists(for country: String, callback: @escaping ((Swift.Result<TopArtists, Error>) -> Void)) {
     let params = [
       "method": "geo.gettopartists",
       "api_key": "22fe3534d6700d93d59550970657a18d",
@@ -28,7 +28,7 @@ final class APIManager: API {
     }
   }
   
-  func topAlbums(for artistMbid: String, callback: @escaping ((Swift.Result<TopAlbums, NetworkError>) -> Void)) {
+  func topAlbums(for artistMbid: String, callback: @escaping ((Swift.Result<TopAlbums, Error>) -> Void)) {
     let params = [
       "method": "artist.gettopalbums",
       "api_key": "22fe3534d6700d93d59550970657a18d",
@@ -40,7 +40,7 @@ final class APIManager: API {
       case .success(let albums):
         callback(Swift.Result.success(albums))
       case .failure(let error):
-        callback(Swift.Result.failure(self.handleError(error)))
+        callback(Swift.Result.failure(error))
       }
     }
   }

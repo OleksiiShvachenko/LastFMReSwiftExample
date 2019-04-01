@@ -14,9 +14,8 @@
 		188ACDD4213553F100A374DC /* LastFMReduxState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188ACDCD213553F100A374DC /* LastFMReduxState.framework */; };
 		188ACDD5213553F100A374DC /* LastFMReduxState.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 188ACDCD213553F100A374DC /* LastFMReduxState.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		188ACDDF21355ED600A374DC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0411EE8086B00AAF810 /* AppState.swift */; };
-		188ACDE121355EE700A374DC /* ErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0321EE8086B00AAF810 /* ErrorState.swift */; };
-		188ACDE221355EE700A374DC /* CountryArtistsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0681EE81A1100AAF810 /* CountryArtistsState.swift */; };
-		188ACDE321355EE700A374DC /* ArtistState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0661EE819FE00AAF810 /* ArtistState.swift */; };
+		188ACDE221355EE700A374DC /* ArtistsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0681EE81A1100AAF810 /* ArtistsState.swift */; };
+		188ACDE321355EE700A374DC /* AlbumsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0661EE819FE00AAF810 /* AlbumsState.swift */; };
 		188ACDE521355F2800A374DC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B05C1EE80BB600AAF810 /* Artist.swift */; };
 		188ACDE621355F2800A374DC /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0601EE812A000AAF810 /* Image.swift */; };
 		188ACDE821355F2800A374DC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0641EE817DB00AAF810 /* Album.swift */; };
@@ -26,6 +25,10 @@
 		188ACE02213589EB00A374DC /* NetworkMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACE01213589EB00A374DC /* NetworkMiddleware.swift */; };
 		188ACE0421358A0300A374DC /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACE0321358A0300A374DC /* Middleware.swift */; };
 		188ACE0621358D2600A374DC /* NetworkActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACE0521358D2600A374DC /* NetworkActions.swift */; };
+		18DD2F2122521E6900B12D28 /* ArtistsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD2F2022521E6900B12D28 /* ArtistsReducer.swift */; };
+		18DD2F2322521E9100B12D28 /* ArtistsActionCreators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD2F2222521E9100B12D28 /* ArtistsActionCreators.swift */; };
+		18DD2F2522523CA100B12D28 /* AlbumsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD2F2422523CA100B12D28 /* AlbumsReducer.swift */; };
+		18DD2F2722523CB600B12D28 /* AlbumsActionCreators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD2F2622523CB600B12D28 /* AlbumsActionCreators.swift */; };
 		2FB5F9289C67AD634C63D3A5 /* Pods_LastFMReduxState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C25C81E7C55B54AFF99DCF0 /* Pods_LastFMReduxState.framework */; };
 		343DE040B4B79865D833B14F /* Pods_ReduxExampleLastFMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAE8D4B74BDB6933F893EC0 /* Pods_ReduxExampleLastFMTests.framework */; };
 		7419B0011EE806E500AAF810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419B0001EE806E500AAF810 /* AppDelegate.swift */; };
@@ -103,6 +106,10 @@
 		188ACE01213589EB00A374DC /* NetworkMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMiddleware.swift; sourceTree = "<group>"; };
 		188ACE0321358A0300A374DC /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		188ACE0521358D2600A374DC /* NetworkActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActions.swift; sourceTree = "<group>"; };
+		18DD2F2022521E6900B12D28 /* ArtistsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsReducer.swift; sourceTree = "<group>"; };
+		18DD2F2222521E9100B12D28 /* ArtistsActionCreators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsActionCreators.swift; sourceTree = "<group>"; };
+		18DD2F2422523CA100B12D28 /* AlbumsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsReducer.swift; sourceTree = "<group>"; };
+		18DD2F2622523CB600B12D28 /* AlbumsActionCreators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsActionCreators.swift; sourceTree = "<group>"; };
 		2622406E34C1A8D9653D4AA5 /* Pods-ReduxExampleLastFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFM.release.xcconfig"; path = "Target Support Files/Pods-ReduxExampleLastFM/Pods-ReduxExampleLastFM.release.xcconfig"; sourceTree = "<group>"; };
 		2CAE8D4B74BDB6933F893EC0 /* Pods_ReduxExampleLastFMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxExampleLastFMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9321534D77E62A21983F3C /* Pods-ReduxExampleLastFMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleLastFMTests.debug.xcconfig"; path = "Target Support Files/Pods-ReduxExampleLastFMTests/Pods-ReduxExampleLastFMTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +123,6 @@
 		7419B0111EE806E500AAF810 /* ReduxExampleLastFMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxExampleLastFMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7419B0171EE806E500AAF810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7419B0311EE8086B00AAF810 /* ErrorHandlerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandlerController.swift; sourceTree = "<group>"; };
-		7419B0321EE8086B00AAF810 /* ErrorState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorState.swift; sourceTree = "<group>"; };
 		7419B0361EE8086B00AAF810 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7419B0371EE8086B00AAF810 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7419B03B1EE8086B00AAF810 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -129,8 +135,8 @@
 		7419B05C1EE80BB600AAF810 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		7419B0601EE812A000AAF810 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		7419B0641EE817DB00AAF810 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		7419B0661EE819FE00AAF810 /* ArtistState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistState.swift; sourceTree = "<group>"; };
-		7419B0681EE81A1100AAF810 /* CountryArtistsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryArtistsState.swift; sourceTree = "<group>"; };
+		7419B0661EE819FE00AAF810 /* AlbumsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsState.swift; sourceTree = "<group>"; };
+		7419B0681EE81A1100AAF810 /* ArtistsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsState.swift; sourceTree = "<group>"; };
 		7419B06A1EE81EBA00AAF810 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		7419B06C1EE8208400AAF810 /* CountryArtists.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountryArtists.storyboard; sourceTree = "<group>"; };
 		7419B0741EE8250E00AAF810 /* ArtistsListContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsListContainerViewController.swift; sourceTree = "<group>"; };
@@ -194,7 +200,6 @@
 				188ACDFC2135794200A374DC /* Network */,
 				7419B0331EE8086B00AAF810 /* Models */,
 				7419B0401EE8086B00AAF810 /* Core */,
-				188ACDDA21355BEC00A374DC /* Flows */,
 				188ACDCF213553F100A374DC /* LastFMReduxState.h */,
 				188ACDD0213553F100A374DC /* Info.plist */,
 			);
@@ -204,9 +209,8 @@
 		188ACDDA21355BEC00A374DC /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				188ACDDE21355C3800A374DC /* Error */,
-				188ACDDD21355C0600A374DC /* Countries */,
 				188ACDDC21355BFF00A374DC /* Artist */,
+				18DD2F1C225218C600B12D28 /* Albums */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -214,25 +218,11 @@
 		188ACDDC21355BFF00A374DC /* Artist */ = {
 			isa = PBXGroup;
 			children = (
-				7419B0661EE819FE00AAF810 /* ArtistState.swift */,
+				7419B0681EE81A1100AAF810 /* ArtistsState.swift */,
+				18DD2F2022521E6900B12D28 /* ArtistsReducer.swift */,
+				18DD2F2222521E9100B12D28 /* ArtistsActionCreators.swift */,
 			);
 			path = Artist;
-			sourceTree = "<group>";
-		};
-		188ACDDD21355C0600A374DC /* Countries */ = {
-			isa = PBXGroup;
-			children = (
-				7419B0681EE81A1100AAF810 /* CountryArtistsState.swift */,
-			);
-			path = Countries;
-			sourceTree = "<group>";
-		};
-		188ACDDE21355C3800A374DC /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				7419B0321EE8086B00AAF810 /* ErrorState.swift */,
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 		188ACDFC2135794200A374DC /* Network */ = {
@@ -243,6 +233,16 @@
 				188ACE0521358D2600A374DC /* NetworkActions.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		18DD2F1C225218C600B12D28 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				7419B0661EE819FE00AAF810 /* AlbumsState.swift */,
+				18DD2F2422523CA100B12D28 /* AlbumsReducer.swift */,
+				18DD2F2622523CB600B12D28 /* AlbumsActionCreators.swift */,
+			);
+			path = Albums;
 			sourceTree = "<group>";
 		};
 		7419AFF41EE806E500AAF810 = {
@@ -340,6 +340,7 @@
 			children = (
 				7419B0411EE8086B00AAF810 /* AppState.swift */,
 				188ACE0321358A0300A374DC /* Middleware.swift */,
+				188ACDDA21355BEC00A374DC /* Flows */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -764,17 +765,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188ACDE121355EE700A374DC /* ErrorState.swift in Sources */,
 				188ACE0021357D7900A374DC /* NetworkError.swift in Sources */,
 				188ACDE621355F2800A374DC /* Image.swift in Sources */,
+				18DD2F2322521E9100B12D28 /* ArtistsActionCreators.swift in Sources */,
 				188ACDFF21357D3D00A374DC /* API.swift in Sources */,
-				188ACDE321355EE700A374DC /* ArtistState.swift in Sources */,
+				188ACDE321355EE700A374DC /* AlbumsState.swift in Sources */,
 				188ACE0621358D2600A374DC /* NetworkActions.swift in Sources */,
 				188ACDDF21355ED600A374DC /* AppState.swift in Sources */,
 				188ACDE921355F2800A374DC /* Country.swift in Sources */,
 				188ACE02213589EB00A374DC /* NetworkMiddleware.swift in Sources */,
-				188ACDE221355EE700A374DC /* CountryArtistsState.swift in Sources */,
+				188ACDE221355EE700A374DC /* ArtistsState.swift in Sources */,
+				18DD2F2722523CB600B12D28 /* AlbumsActionCreators.swift in Sources */,
 				188ACDE521355F2800A374DC /* Artist.swift in Sources */,
+				18DD2F2522523CA100B12D28 /* AlbumsReducer.swift in Sources */,
+				18DD2F2122521E6900B12D28 /* ArtistsReducer.swift in Sources */,
 				188ACDE821355F2800A374DC /* Album.swift in Sources */,
 				188ACE0421358A0300A374DC /* Middleware.swift in Sources */,
 			);

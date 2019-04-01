@@ -9,17 +9,15 @@ import ReSwift
 import ReSwiftThunk
 
 public struct AppState: StateType {
-  public let artistsByCountryState: CountryArtistsState
-  public let artistAlbumsState: ArtistState
-  public let errorState: ErrorState
+  public let artistsState: ArtistsState
+  public let albumsState: AlbumsState
 }
 
 extension AppState {
   static func appReducer(action: Action, state: AppState?) -> AppState {
     return AppState(
-      artistsByCountryState: CountryArtistsState.Reducer.handleAction(action: action, state: state?.artistsByCountryState),
-      artistAlbumsState: ArtistState.Reducer.handleAction(action: action, state: state?.artistAlbumsState),
-      errorState: ErrorState.Reducer.handleAction(action: action, state: state?.errorState)
+      artistsState: ArtistsState.Reducer.handleAction(action: action, state: state?.artistsState),
+      albumsState: AlbumsState.Reducer.handleAction(action: action, state: state?.albumsState)
     )
   }
 }

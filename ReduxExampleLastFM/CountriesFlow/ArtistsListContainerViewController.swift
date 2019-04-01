@@ -12,7 +12,7 @@ import LastFMReduxState
 
 struct ArtistsListContainerLens: Lens {
   static func lens(_ state: AppState) -> Country {
-    return state.artistsByCountryState.country
+    return state.artistsState.country
   }
 }
 
@@ -35,7 +35,7 @@ class ArtistsListContainerViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    mainStore.dispatch(CountryArtistsState.ActionCreators.selectCountry(.ukraine))
+    mainStore.dispatch(ArtistsState.ActionCreators.selectCountry(.ukraine))
   }
   
   override func viewWillAppear(_ animated: Bool) {

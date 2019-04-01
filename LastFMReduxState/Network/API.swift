@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol API {
-  func topArtists(for country: String, callback: @escaping ((_ result: Swift.Result<TopArtists, NetworkError>) -> Void))
-  func topAlbums(for artistMbid: String, callback: @escaping ((_ result: Swift.Result<TopAlbums, NetworkError>) -> Void))
+  func topArtists(for country: String, callback: @escaping ((_ result: Swift.Result<TopArtists, Error>) -> Void))
+  func topAlbums(for artistMbid: String, callback: @escaping ((_ result: Swift.Result<TopAlbums, Error>) -> Void))
   func cancel()
 }

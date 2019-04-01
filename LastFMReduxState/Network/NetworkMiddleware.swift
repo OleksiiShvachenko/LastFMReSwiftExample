@@ -18,16 +18,16 @@ func loadArtists(service: API) -> Middleware {
 
 private func loadAlbums(action: Action, context: MiddlewareContext<AppState>, service: API) -> Action? {
   guard
-    let loadAlbumsAction = action as? ArtistState.Actions,
+    let loadAlbumsAction = action as? AlbumsState.Actions,
     case .loadAlbums(let artistMbid) = loadAlbumsAction else {
       return action
   }
   service.topAlbums(for: artistMbid) { (result) in
     switch result {
     case .success(let albums):
-      context.dispatch(ArtistState.Actions.setAlbums(albums.albums))
+      context.dispatch(AlbumsState.Actions.setAlbums(albums.albums))
     case .failure(let error):
-      context.dispatch(ErrorState.Actions.errorMessage(error.stringValue))
+      break
     }
   }
   return nil
@@ -35,16 +35,16 @@ private func loadAlbums(action: Action, context: MiddlewareContext<AppState>, se
 
 private func loadArtists(action: Action, context: MiddlewareContext<AppState>, service: API) -> Action? {
   guard
-    let loadArtistsAction = action as? CountryArtistsState.Actions,
+    let loadArtistsAction = action as? ArtistsState.Actions,
     case .loadArtists(let country) = loadArtistsAction else {
       return action
   }
   service.topArtists(for: country.rawValue) { (result) in
     switch result {
     case .success(let artists):
-      context.dispatch(CountryArtistsState.Actions.setArtists(artists.artists))
+      context.dispatch(ArtistsState.Actions.setArtists(artists.artists))
     case .failure(let error):
-      context.dispatch(ErrorState.Actions.errorMessage(error.stringValue))
+      break
     }
 
   }
