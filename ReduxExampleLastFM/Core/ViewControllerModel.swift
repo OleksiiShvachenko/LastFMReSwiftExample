@@ -8,9 +8,6 @@
 import Foundation
 
 protocol ViewControllerModel { }
-protocol HasError {
-    var error: String? { get }
-}
 
 protocol ViewControllerModelSupport {
     associatedtype ModelType: ViewControllerModel

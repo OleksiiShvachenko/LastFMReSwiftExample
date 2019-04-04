@@ -14,15 +14,16 @@ extension ArtistsState {
     public static func didTapOnArtist(at index: Int) -> Thunk<AppState> {
       return Thunk<AppState> { dispatch, getState in
         guard let state = getState() else { return }
-        guard index < state.artistsState.artists.count else { fatalError() }
-        let artist = state.artistsState.artists[index]
+        guard let artists = state.artistsState.artists,
+          index < artists.count else { fatalError() }
+        let artist = artists[index]
         dispatch(AlbumsState.ActionCreators.selectArtist(artist))
       }
     }
     
-    public static func selectCountry(_ country: Country) -> Thunk<AppState> {
+    public static func loadArtists(for country: Country) -> Thunk<AppState> {
       return Thunk<AppState> { dispatch, getState in
-        dispatch(ArtistsState.Actions.loadArtists(country))
+        dispatch(NetworkActions.loadArtists(country))
         dispatch(ArtistsState.Actions.setCountry(country))
       }
     }

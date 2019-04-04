@@ -10,5 +10,5 @@ import ReSwift
 
 public struct AlbumsState: StateType {
   public var artist: Artist?
-  public var albums: [Album]
+  public var albums: [Album] = []
 }

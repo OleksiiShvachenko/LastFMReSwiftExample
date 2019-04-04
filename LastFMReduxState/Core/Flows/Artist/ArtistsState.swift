@@ -9,6 +9,8 @@
 import ReSwift
 
 public struct ArtistsState: StateType {
-  public var artists: [Artist]
-  public var country: Country
+  public var country: Country = .ukraine
+  public var artists: [Artist]?
+  public var isLoading: Bool = false
+  public var loadingError: Error?
 }

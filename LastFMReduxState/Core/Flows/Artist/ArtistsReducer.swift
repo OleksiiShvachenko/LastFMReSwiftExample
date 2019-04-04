@@ -11,7 +11,7 @@ import ReSwift
 extension ArtistsState {
   struct Reducer {
     static func handleAction(action: Action, state: ArtistsState?) -> ArtistsState {
-      var state = state ?? ArtistsState(artists: [], country: .ukraine)
+      var state = state ?? ArtistsState()
       guard let action = action as? Actions else {
         return state
       }
@@ -20,16 +20,19 @@ extension ArtistsState {
         state.artists = artists
       case .setCountry(let country):
         state.country = country
-      case .loadArtists(_):
-        break
+      case .setIsLoading(let isLoading):
+        state.isLoading = isLoading
+      case .setLoadingError(let error):
+        state.loadingError = error
       }
       return state
     }
   }
   
   enum Actions: Action {
-    case setArtists([Artist])
+    case setArtists([Artist]?)
     case setCountry(Country)
-    case loadArtists(Country)
+    case setIsLoading(Bool)
+    case setLoadingError(Error?)
   }
 }

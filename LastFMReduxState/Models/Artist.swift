@@ -22,10 +22,12 @@ public struct TopArtists: Decodable {
   }
 }
 
+public protocol Mbid {}
+public typealias ArtistId = Id<String, Mbid>
 public struct Artist: Decodable {
   public let name: String
   public let listeners: Int
-  public let mbid: String
+  public let mbid: ArtistId
   public let images: [Image]
   
   enum CodingKeys : String, CodingKey {
@@ -39,7 +41,7 @@ public struct Artist: Decodable {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     name = try container.decode(String.self, forKey: .name)
     listeners = Int(try container.decode(String.self, forKey: .listeners))!
-    mbid = try container.decode(String.self, forKey: .mbid)
+    mbid = ArtistId(rawValue: try container.decode(String.self, forKey: .mbid))
     images = try container.decode([Image].self, forKey: .images)
   }
 }

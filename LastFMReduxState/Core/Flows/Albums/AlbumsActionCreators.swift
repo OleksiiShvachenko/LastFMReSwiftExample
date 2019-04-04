@@ -14,7 +14,7 @@ extension AlbumsState {
     static func selectArtist(_ artist: Artist) -> Thunk<AppState> {
       return Thunk<AppState> { dispatch, _ in
         dispatch(AlbumsState.Actions.setAlbums([]))
-        dispatch(Actions.loadAlbums(artistMbid: artist.mbid))
+        dispatch(NetworkActions.loadAlbums(artist.mbid))
         dispatch(Actions.setArtist(artist))
       }
     }

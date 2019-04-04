@@ -27,8 +27,7 @@ public func createStore(_ sessionManager: API) -> Store<AppState> {
     reducer: AppState.appReducer,
     state: nil,
     middleware: [
-      createMiddleware(loadArtists(service: sessionManager)),
-      createMiddleware(loadAlbums(service: sessionManager)),
+      createMiddleware(NetworkMiddleware.network(service: sessionManager)),
       createThunksMiddleware()
     ]
   )

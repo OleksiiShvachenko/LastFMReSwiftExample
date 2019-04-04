@@ -11,7 +11,7 @@ import ReSwift
 extension AlbumsState {
   struct Reducer {
     static func handleAction(action: ReSwift.Action, state: AlbumsState?) -> AlbumsState {
-      var state = state ?? AlbumsState(artist: nil, albums: [])
+      var state = state ?? AlbumsState()
       guard let action = action as? Actions else {
         return state
       }
@@ -20,8 +20,6 @@ extension AlbumsState {
         state.artist = artist
       case .setAlbums(let albums):
         state.albums = albums
-      case .loadAlbums(_):
-        break
       }
       return state
     }
@@ -30,6 +28,5 @@ extension AlbumsState {
   enum Actions: Action {
     case setArtist(Artist)
     case setAlbums([Album])
-    case loadAlbums(artistMbid: String)
   }
 }

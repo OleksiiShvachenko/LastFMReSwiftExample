@@ -11,7 +11,7 @@ import LastFMReduxState
 
 struct ArtistsListLens: Lens {
     static func lens(_ state: AppState) -> (artists: [Artist], error: String?) {
-        return (state.artistsState.artists, nil)
+        return (state.artistsState.artists ?? [], nil)
     }
     
     static func filter(old: (artists: [Artist], error: String?), new: (artists: [Artist], error: String?)) -> Bool {
